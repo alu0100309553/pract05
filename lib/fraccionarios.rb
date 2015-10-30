@@ -26,7 +26,7 @@ class Fraccionarios
         n=(@num*fraccion.den)+(fraccion.num*@den)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
-        return r.string
+        return r
     end
     
     #resta
@@ -34,7 +34,7 @@ class Fraccionarios
         n=(@num*fraccion.den)-(fraccion.num*@den)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
-        return r.string
+        return r
     end
     
     #multiplicación
@@ -42,7 +42,7 @@ class Fraccionarios
         n=(@num*fraccion.num)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
-        return r.string
+        return r
     end
     
     #división
@@ -50,6 +50,32 @@ class Fraccionarios
         n=(@num*fraccion.den)
         d=@den*fraccion.num
         r=Fraccionarios.new(n,d)
-        return r.string
+        return r
     end
+    
+    #cálculo del mcd
+    def mcd (num, den)
+        a, b = num.abs, den.abs
+        while b != 0
+            a, b = b, a % b
+        end
+        return a
+    end
+    
+    #cálculo del mcd sin parámetros
+    def mcd
+        a, b = @num.abs, @den.abs
+        while b != 0
+            a, b = b, a % b
+        end
+        return a
+    end
+    
+    #simplificación
+    def simp
+        div = mcd
+        @num = @num/div
+        @den = @den/div
+    end
+    
 end

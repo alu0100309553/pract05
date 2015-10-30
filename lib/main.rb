@@ -1,8 +1,21 @@
 require "./fraccionarios.rb"
 
-a=Fraccionarios.new(1,2)
-b=Fraccionarios.new(3,4)
-puts a.sum(b)
-puts a.res(b)
-puts a.mul(b)
-puts a.div(b)
+a=Fraccionarios.new(5,20)
+b=Fraccionarios.new(12,18)
+
+puts "Fracciones sin simplificar"
+puts a.string
+puts b.string
+puts "Fracciones simplificadas"
+a.simp
+b.simp
+puts a.string
+puts b.string
+puts "Suma"
+puts a.sum(b).string
+puts "Resta"
+puts a.res(b).string
+puts "Multiplicación"
+puts a.mul(b).string
+puts "División"
+puts a.div(b).string

@@ -1,0 +1,5 @@
+task :default => :all
+desc "pruebas de clase fraccionarios"
+task :all do
+    sh "ruby -i tc_fraccionarios.rb"
+end

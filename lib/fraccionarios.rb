@@ -19,12 +19,12 @@ class Fraccionarios
     end
     
     #retorna la fraccion en forma de string
-    def string
+    def to_s
         return "#{@num}/#{@den}"
     end
     
     #suma
-    def sum(fraccion)
+    def +(fraccion)
         n=(@num*fraccion.den)+(fraccion.num*@den)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
@@ -32,7 +32,7 @@ class Fraccionarios
     end
     
     #resta
-    def res(fraccion)
+    def -(fraccion)
         n=(@num*fraccion.den)-(fraccion.num*@den)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
@@ -40,7 +40,7 @@ class Fraccionarios
     end
     
     #multiplicación
-    def mul(fraccion)
+    def *(fraccion)
         n=(@num*fraccion.num)
         d=@den*fraccion.den
         r=Fraccionarios.new(n,d)
@@ -48,7 +48,7 @@ class Fraccionarios
     end
     
     #división
-    def div(fraccion)
+    def /(fraccion)
         n=(@num*fraccion.den)
         d=@den*fraccion.num
         r=Fraccionarios.new(n,d)

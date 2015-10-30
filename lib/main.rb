@@ -4,18 +4,18 @@ a=Fraccionarios.new(5,20)
 b=Fraccionarios.new(12,18)
 
 puts "Fracciones sin simplificar"
-puts a.string
-puts b.string
+puts a.to_s
+puts b.to_s
 puts "Fracciones simplificadas"
 a.simp
 b.simp
-puts a.string
-puts b.string
+puts a.to_s
+puts b.to_s
 puts "Suma"
-puts a.sum(b).string
+puts (a+b).to_s
 puts "Resta"
-puts a.res(b).string
+puts (a-b).to_s
 puts "Multiplicación"
-puts a.mul(b).string
+puts (a*b).to_s
 puts "División"
-puts a.div(b).string
+puts (a/b).to_s

@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+# encoding: utf-8
 class Fraccionarios
     
     #inicializador de la clase
